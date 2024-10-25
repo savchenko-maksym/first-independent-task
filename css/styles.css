@@ -31,6 +31,10 @@ address {
   font-style: normal;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   width: 1166px;
   padding-left: 15px;
@@ -83,6 +87,8 @@ address {
 }
 
 .header-logo {
+  display: flex;
+  align-items: center;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
@@ -97,11 +103,13 @@ address {
 
 .header-menu-list {
   display: flex;
+  align-items: center;
   gap: 24px;
-  margin-right: 90px;
 }
 
 .header-menu-item {
+  display: flex;
+  align-items: center;
 }
 
 .header-menu-link {
@@ -110,6 +118,24 @@ address {
   line-height: 1.14;
   letter-spacing: -0.02em;
   color: #111;
+  position: relative;
+  transition: color 300ms linear;
+}
+
+.header-menu-link:hover {
+  color: #fd9222;
+}
+
+.active::after {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 4px;
+  background-color: #fd9222;
+  border-radius: 3px;
+  position: absolute;
+  lef: 0;
+  bottom: -30px;
 }
 
 .header-soc-list {
@@ -122,16 +148,48 @@ address {
 }
 
 .header-soc-icon {
+  fill: transparent;
+  stroke: #fff;
+}
+
+.header-soc-link {
+  width: 44px;
+  height: 44px;
+  background-color: #fd9222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 300ms linear, stroke 300ms linear;
+}
+
+.header-soc-link:hover,
+.header-soc-link:focus {
+  background-color: aqua;
+}
+
+.header-soc-link:hover .header-soc-icon,
+.header-soc-link:focus .header-soc-icon {
+  stroke: #111;
 }
 
 /* ---------------------------MAIN--------------------- */
 
 .hero {
   background-color: rgba(30, 24, 35, 0.4);
+  background-image: linear-gradient(
+      rgba(30, 24, 35, 0.4),
+      rgba(30, 24, 35, 0.4)
+    ),
+    url(../img/chocolate-covered-cocoa-powder\ 1.jpg);
   border-radius: 30px;
   padding-top: 381px;
   padding-bottom: 40px;
-  margin-bottom: 72px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1200px;
+  margin: 0 auto 72px;
+  background-size: cover;
 }
 
 .hero-buttons {
@@ -158,6 +216,15 @@ address {
   background-color: #fd9222;
   border-radius: 100px;
   border: none;
+  /* transition-property: background-color, color;
+  transition-duration: 300ms;
+  transition-timing-function: linear; */
+  transition: background-color 300ms linear, color 300ms linear;
+}
+
+.hero-btn:hover {
+  background-color: #fcf1e0;
+  color: #fd9222;
 }
 
 .hero-link {
@@ -253,8 +320,34 @@ address {
   width: calc((100% - 57px) / 4);
 }
 
+.taste-item:hover .taste-cover-text {
+  transform: translate(0);
+}
+
+.taste-cover-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .taste-item-img {
   margin-bottom: 36px;
+}
+
+.taste-cover-text {
+  position: absolute;
+  background-color: #fd9222;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
 }
 
 .taste-item-name {
