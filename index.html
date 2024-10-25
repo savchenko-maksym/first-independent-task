@@ -125,44 +125,54 @@
                   width="206"
                   height="160"
                 />
-                <p class="taste-cover-text">Milk chocolate is a solid chocolate confectionery containing cocoa, sugar and milk. It is the most consumed type of chocolate. Chocolate was originally sold and consumed as a beverage in pre-Columbian times. Although four-fifths of all milk chocolate is sold in the United States and Europe.</p>
+                <p class="taste-cover-text">Milk chocolate is a solid chocolate confectionery containing cocoa, sugar and milk. It is the most consumed type of chocolate. 
+                  Chocolate was originally sold and consumed as a beverage in pre-Columbian times. Although four-fifths of all milk chocolate is sold in the United States and Europe.</p>
               </div>
               <h3 class="taste-item-name">mILK CHOCOLATE</h3>
             </li>
             <li class="taste-item">
-              <img
-                class="taste-item-img"
-                src="./img/kisspng-milk-white-chocolate-hot-chocolate-chocolate-bar-c-5af7417b10bc19 1-1-min.png"
-                alt="Milk"
-                width="206"
-                height="160"
-              />
+           <div class="taste-cover-wrapper">
+                <img
+                  class="taste-item-img"
+                  src="./img/kisspng-milk-white-chocolate-hot-chocolate-chocolate-bar-c-5af7417b10bc19 1-1-min.png"
+                  alt="Milk"
+                  width="206"
+                  height="160"
+                />
+                <p class="taste-cover-text">Milk is a white liquid food produced by the mammary glands of mammals. It is the primary source of nutrition for young mammals (including breastfed human infants) before they are able to digest solid food.Early-lactation milk, which is called colostrum, contains antibodies that strengthen the immune system.</p>
+           </div>
               <h3 class="taste-item-name">Milk</h3>
             </li>
             <li class="taste-item">
-              <img
-                class="taste-item-img"
-                src="./img/kisspng-milk-white-chocolate-hot-chocolate-chocolate-bar-c-5af7417b10bc19 1-2-min.png"
-                alt="nuts"
-                width="206"
-                height="160"
-              />
+              <div class="taste-cover-wrapper">
+                <img
+                  class="taste-item-img"
+                  src="./img/kisspng-milk-white-chocolate-hot-chocolate-chocolate-bar-c-5af7417b10bc19 1-2-min.png"
+                  alt="nuts"
+                  width="206"
+                  height="160"
+                />
+                <p class="taste-cover-text">Almonds, pistachios, and walnuts are some types of nuts that contain healthy nutrients. When eaten as part of a nutrient-dense diet, these 9 nuts may offer benefits such as reducing your risk of heart disease. They’re a good source of fiber, healthy fats, and plant protein. Plus, they’re great on their own.</p>
+              </div>
               <h3 class="taste-item-name">nuts</h3>
             </li>
             <li class="taste-item">
-              <img
-                class="taste-item-img"
-                src="./img/kisspng-milk-white-chocolate-hot-chocolate-chocolate-bar-c-5af7417b10bc19 2-min.png"
-                alt="SWEET CHOCOLATE"
-                width="206"
-                height="160"
-              />
+           <div class="taste-cover-wrapper">
+                <img
+                  class="taste-item-img"
+                  src="./img/kisspng-milk-white-chocolate-hot-chocolate-chocolate-bar-c-5af7417b10bc19 2-min.png"
+                  alt="SWEET CHOCOLATE"
+                  width="206"
+                  height="160"
+                />
+                <p class="taste-cover-text">Semi-sweet chocolate has a cocoa solid content of 35 to 65%. One of the best ways to gain an understanding of this type of chocolate is to compare it to a different type of chocolate. Semisweet is darker than milk chocolate. In a taste comparison, it has a slightly bitter taste whereas milk chocolate is sweeter and more mellow. </p>
+           </div>
               <h3 class="taste-item-name">sEMI - SWEET CHOCOLATE</h3>
             </li>
           </ul>
         </div>
       </section>
-      <section class="made">
+      <section class="made" id="made">
         <div class="container">
           <h2 class="made-title">
             hOW IT’S <span class="made-title-color">MADE?</span>
@@ -296,5 +306,45 @@
         </address>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-open" type="button">X</button>
+        <p class="modal-title">LEAVE A REVIEW ABOUT <span>OUR CHOCOLATE</span></p>
+        <form class="modal-form">
+         <div class="modal-field">
+            <label for="user-name" class="modal-label">Name</label>
+            <div class="input-wrapper">
+              <input type="text" name="user-name" id="user-name" class="modal-input">
+              <svg class="modal-icon" width="24" height="24">
+                <use href="./img/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+         </div>
+          <div class="modal-field">
+            <label for="uuser-email" class="modal-label">Email</label>
+            <div class="input-wrapper">
+              <input type="email" name="user-email" id="user-email" class="modal-input">
+              <svg class="modal-icon" width="24" height="24">
+                <use href="./img/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label for="user-tel" class="modal-label">Phone number</label>
+            <div class="input-wrapper">
+              <input type="tel" name="user-tel" id="user-tel" class="modal-input" required>
+              <svg class="modal-icon" width="24" height="24">
+                <use href="./img/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label for="user-comment" class="modal-label">Comment</label>
+            <textarea name="user-comment" id="user-comment" class="modal-textarea" placeholder="Enter text"></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
