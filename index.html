@@ -62,7 +62,9 @@
             of pure delight!
           </h1>
           <div class="hero-buttons">
-            <button class="hero-btn" type="button">Buy now</button>
+            <button class="hero-btn" type="button" data-modal-open>
+              Buy now
+            </button>
             <a class="hero-link" href="#made">How it’s made</a>
             <a class="hero-link-scroll" href="#scroll">scroll down</a>
           </div>
@@ -359,9 +361,9 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-open" data-modal>
       <div class="modal">
-        <button class="modal-open" type="button">X</button>
+        <button class="modal-open" type="button" data-modal-close>X</button>
         <p class="modal-title">
           LEAVE A REVIEW ABOUT <span>OUR CHOCOLATE</span>
         </p>
@@ -439,5 +441,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
